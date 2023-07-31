@@ -1,0 +1,39 @@
+/* src/components/Componente1/Componente1.css */
+.componente1-container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.componente1-container h1 {
+    margin-bottom: 20px;
+}
+
+.componente1-container div {
+    margin-bottom: 10px;
+}
+
+.componente1-container label {
+    display: block;
+    font-weight: bold;
+}
+
+.componente1-container input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+}
+
+.componente1-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.componente1-container button:hover {
+    background-color: #0056b3;
+}
