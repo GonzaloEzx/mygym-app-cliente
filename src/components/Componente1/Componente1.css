@@ -1,28 +1,32 @@
 /* src/components/Componente1/Componente1.css */
 .componente1-container {
+    max-width: 500px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
-    max-width: 400px;
-    margin: 0 auto;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
 }
 
 .componente1-container h1 {
+    text-align: center;
     margin-bottom: 20px;
 }
 
-.componente1-container div {
-    margin-bottom: 10px;
+.componente1-container form {
+    display: grid;
+    gap: 10px;
 }
 
 .componente1-container label {
-    display: block;
     font-weight: bold;
 }
 
 .componente1-container input {
     width: 100%;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
 .componente1-container button {
@@ -31,9 +35,21 @@
     background-color: #007bff;
     color: #fff;
     border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 .componente1-container button:hover {
     background-color: #0056b3;
+}
+
+.informacion-ingresada {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.informacion-ingresada h2 {
+    margin-bottom: 10px;
 }
