@@ -1,6 +1,7 @@
 /* src/components/Componente1/Componente1.css */
 .componente1-container {
-    max-width: 500px;
+    max-width: 400px;
+    /* Ajusta el ancho máximo según tus necesidades */
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
@@ -48,8 +49,26 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     padding: 10px;
+    text-align: center;
+    /* Centra el contenido dentro de la sección */
 }
 
 .informacion-ingresada h2 {
     margin-bottom: 10px;
+}
+
+/* Estilo para el botón de Confirmar */
+.informacion-ingresada button {
+    margin-top: 10px;
+    background-color: #28a745;
+    /* Ajusta el tamaño del botón según tus necesidades */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.informacion-ingresada button:hover {
+    background-color: #218838;
 }

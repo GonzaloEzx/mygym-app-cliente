@@ -19,9 +19,30 @@ function Componente1() {
         }));
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(formData);
+
+        try {
+            // Envía los datos a la API ficticia (ajusta la URL según tu caso)
+            const response = await fetch("https://mi-api.com/api/usuarios", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            // Comprueba si la respuesta fue exitosa
+            if (response.ok) {
+                console.log("Datos enviados exitosamente");
+            } else {
+                console.error("Error al enviar los datos");
+            }
+        } catch (error) {
+            console.error("Error en la conexión con la API:", error);
+        }
+
+        // Reinicia el formulario después del envío
         setFormData({
             nombre: "",
             apellido: "",
@@ -79,8 +100,8 @@ function Componente1() {
                     onChange={handleChange}
                 />
             </div>
-
-
+            {/* Mueve el botón de "Agregar Usuario" al final del formulario */}
+            <button type="submit">Agregar Usuario</button>
         </form>
     );
 
@@ -93,8 +114,10 @@ function Componente1() {
             <p>Correo Electrónico: {formData.correo}</p>
             <p>Fecha de ingreso: {formData.ingreso}</p>
             <p>Cuenta: {formData.cuenta}</p>
-            <label>La informacion es correcta</label>
+            {/* Agrega una opción para confirmar la información */}
+            <label>La información es correcta </label>
 
+            <button type="submit">Confirmar</button>
         </div>
     );
 
@@ -102,8 +125,8 @@ function Componente1() {
         <div className="componente1-container">
             <h1>Agregar Usuario</h1>
             {renderFormulario()}
-            {formData.nombre && formData.apellido && formData.correo && formData.ingreso && formData.cuenta && renderInformacionIngresada()}
-            <button type="submit">Agregar Usuario</button>
+            {/* Muestra la sección "Información ingresada" solo si el formulario ha sido enviado */}
+            {Object.values(formData).some((value) => value !== "") && renderInformacionIngresada()}
         </div>
     );
 }
